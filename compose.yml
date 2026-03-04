@@ -1,0 +1,20 @@
+services:
+  zola:
+    user: "1000:1000"
+    image: ghcr.io/getzola/zola:v0.22.1
+    container_name: web
+    ports:
+      - "80:80"
+    volumes:
+      - .:/project
+    command: serve --interface 0.0.0.0 --port 80 --base-url localhost
+    working_dir: /project
+
+  tailwind:
+    user: "1000:1000"
+    build: ./docker/tailwind
+    container_name: tailwind
+    volumes:
+      - .:/project
+    working_dir: /project
+    command: -i ./css/tailwind.css -o ./static/tailwind.css --watch=always
