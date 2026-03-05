@@ -10,9 +10,9 @@
 
 <article>
 	<header class="mb-10">
-		<h1 class="font-extrabold text-4xl tracking-tight">{{ page.title }}</h1>
+		<h1 class="font-extrabold text-4xl tracking-tight animate-slide-up delay-50">{{ page.title }}</h1>
 		{% if page.date %}
-		<div class="flex flex-wrap items-center gap-4 mt-3 text-seasalt-400 dark:text-seasalt-500 text-sm">
+		<div class="flex flex-wrap items-center gap-4 mt-3 text-seasalt-400 dark:text-seasalt-500 text-sm animate-slide-up delay-150">
 			<time datetime="{{ page.date }}">{{ page.date | date(format="%B %e, %Y") }}</time>
 			{% if page.taxonomies.tags %}
 			<span class="flex flex-wrap gap-2">
@@ -28,7 +28,7 @@
 		{% endif %}
 	</header>
 
-	<div class="prose">
+	<div class="animate-fade-in delay-250 prose">
 		{{ page.content | safe }}
 	</div>
 </article>

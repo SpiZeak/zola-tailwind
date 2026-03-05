@@ -9,9 +9,9 @@
 {% block content %}
 
 <header class="mb-10">
-	<h1 class="font-extrabold text-4xl tracking-tight">{{ section.title }}</h1>
+	<h1 class="font-extrabold text-4xl tracking-tight animate-slide-up delay-50">{{ section.title }}</h1>
 	{% if section.content %}
-	<div class="mt-4 prose">{{ section.content | safe }}</div>
+	<div class="mt-4 animate-slide-up delay-150 prose">{{ section.content | safe }}</div>
 	{% endif %}
 </header>
 
@@ -24,7 +24,7 @@
 {% if pages %}
 <ul class="space-y-8">
 	{% for page in pages %}
-	<li class="pb-8 border-seasalt-200 dark:border-warm-charcoal-600 last:border-0 border-b">
+	<li class="pb-8 border-seasalt-200 dark:border-warm-charcoal-600 last:border-0 border-b animate-slide-up" style="animation-delay: {{ loop.index * 75 + 150 }}ms">
 		<a href="{{ page.permalink }}" class="group block">
 			<h2 class="font-semibold group-hover:text-pumpkin text-xl transition-colors">
 				{{ page.title }}
@@ -51,7 +51,7 @@
 </ul>
 
 {% if paginator %}
-<nav class="flex justify-between mt-12 font-medium text-sm" aria-label="Pagination">
+<nav class="flex justify-between mt-12 font-medium text-sm animate-slide-up delay-150" aria-label="Pagination">
 	{% if paginator.previous %}
 	<a href="{{ paginator.previous }}" class="text-pumpkin hover:underline">← Newer posts</a>
 	{% else %}
