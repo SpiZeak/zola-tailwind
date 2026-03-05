@@ -17,7 +17,9 @@
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
+    --color-gray-950: oklch(13% 0.028 261.692);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-xl: 36rem;
@@ -261,6 +263,9 @@
   .flex {
     display: flex;
   }
+  .hidden {
+    display: none;
+  }
   .inline-block {
     display: inline-block;
   }
@@ -269,6 +274,10 @@
   }
   .table {
     display: table;
+  }
+  .size-5 {
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
   }
   .min-h-screen {
     min-height: 100vh;
@@ -373,6 +382,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -539,6 +551,13 @@
       }
     }
   }
+  .hover\:bg-gray-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-100);
+      }
+    }
+  }
   .hover\:bg-gray-200 {
     &:hover {
       @media (hover: hover) {
@@ -567,12 +586,63 @@
       }
     }
   }
+  .dark\:block {
+    &:where(.dark, .dark *) {
+      display: block;
+    }
+  }
+  .dark\:hidden {
+    &:where(.dark, .dark *) {
+      display: none;
+    }
+  }
+  .dark\:border-gray-800 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-gray-800);
+    }
+  }
+  .dark\:bg-gray-950 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-gray-950);
+    }
+  }
+  .dark\:text-gray-100 {
+    &:where(.dark, .dark *) {
+      color: var(--color-gray-100);
+    }
+  }
+  .dark\:text-gray-400 {
+    &:where(.dark, .dark *) {
+      color: var(--color-gray-400);
+    }
+  }
+  .dark\:hover\:bg-gray-800 {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-gray-800);
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-gray-200 {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--color-gray-200);
+        }
+      }
+    }
+  }
 }
 @layer components {
   .prose p {
     margin-bottom: 1.25rem;
     line-height: 1.75;
     color: #374151;
+    &:where(.dark, .dark *) {
+      color: #d1d5db;
+    }
   }
   .prose h1,	.prose h2,	.prose h3,	.prose h4,	.prose h5,	.prose h6 {
     font-weight: 700;
@@ -580,6 +650,9 @@
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: #111827;
+    &:where(.dark, .dark *) {
+      color: #f9fafb;
+    }
   }
   .prose h1 {
     font-size: 2.25rem;
@@ -596,9 +669,15 @@
   .prose a {
     color: #2563eb;
     text-decoration: underline;
+    &:where(.dark, .dark *) {
+      color: #60a5fa;
+    }
   }
   .prose a:hover {
     color: #1d4ed8;
+    &:where(.dark, .dark *) {
+      color: #93c5fd;
+    }
   }
   .prose strong {
     font-weight: 600;
@@ -626,6 +705,10 @@
     font-style: italic;
     color: #6b7280;
     margin: 1.5rem 0;
+    &:where(.dark, .dark *) {
+      border-left-color: #4b5563;
+      color: #9ca3af;
+    }
   }
   .prose pre {
     background-color: #1e1e2e;
@@ -644,6 +727,10 @@
     font-size: 0.875em;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     color: #111827;
+    &:where(.dark, .dark *) {
+      background-color: #1f2937;
+      color: #f9fafb;
+    }
   }
   .prose pre code {
     background: none;
@@ -662,6 +749,9 @@
     border: none;
     border-top: 1px solid #e5e7eb;
     margin: 2.5rem 0;
+    &:where(.dark, .dark *) {
+      border-top-color: #374151;
+    }
   }
   .prose table {
     width: 100%;
@@ -675,10 +765,17 @@
     text-align: left;
     padding: 0.75rem 1rem;
     border-bottom: 2px solid #e5e7eb;
+    &:where(.dark, .dark *) {
+      background-color: #1f2937;
+      border-bottom-color: #374151;
+    }
   }
   .prose td {
     padding: 0.75rem 1rem;
     border-bottom: 1px solid #e5e7eb;
+    &:where(.dark, .dark *) {
+      border-bottom-color: #374151;
+    }
   }
   .prose tr:last-child td {
     border-bottom: none;

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 /*
  * Prose styles for rendered Markdown content.
  * Apply the .prose class to any container wrapping {{ page.content | safe }}.
@@ -9,6 +11,9 @@
 		margin-bottom: 1.25rem;
 		line-height: 1.75;
 		color: #374151;
+		@variant dark {
+			color: #d1d5db;
+		}
 	}
 
 	.prose h1,
@@ -22,6 +27,9 @@
 		margin-top: 2rem;
 		margin-bottom: 0.75rem;
 		color: #111827;
+		@variant dark {
+			color: #f9fafb;
+		}
 	}
 
 	.prose h1 {
@@ -40,10 +48,16 @@
 	.prose a {
 		color: #2563eb;
 		text-decoration: underline;
+		@variant dark {
+			color: #60a5fa;
+		}
 	}
 
 	.prose a:hover {
 		color: #1d4ed8;
+		@variant dark {
+			color: #93c5fd;
+		}
 	}
 
 	.prose strong {
@@ -77,6 +91,10 @@
 		font-style: italic;
 		color: #6b7280;
 		margin: 1.5rem 0;
+		@variant dark {
+			border-left-color: #4b5563;
+			color: #9ca3af;
+		}
 	}
 
 	.prose pre {
@@ -98,6 +116,10 @@
 		font-family:
 			ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 		color: #111827;
+		@variant dark {
+			background-color: #1f2937;
+			color: #f9fafb;
+		}
 	}
 
 	.prose pre code {
@@ -119,6 +141,9 @@
 		border: none;
 		border-top: 1px solid #e5e7eb;
 		margin: 2.5rem 0;
+		@variant dark {
+			border-top-color: #374151;
+		}
 	}
 
 	.prose table {
@@ -134,11 +159,18 @@
 		text-align: left;
 		padding: 0.75rem 1rem;
 		border-bottom: 2px solid #e5e7eb;
+		@variant dark {
+			background-color: #1f2937;
+			border-bottom-color: #374151;
+		}
 	}
 
 	.prose td {
 		padding: 0.75rem 1rem;
 		border-bottom: 1px solid #e5e7eb;
+		@variant dark {
+			border-bottom-color: #374151;
+		}
 	}
 
 	.prose tr:last-child td {
