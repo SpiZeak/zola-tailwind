@@ -4,7 +4,7 @@
 
 <section class="py-16 text-center">
 	<h1 class="mb-4 font-extrabold text-5xl tracking-tight">{{ config.title }}</h1>
-	<p class="mx-auto max-w-xl text-seasalt-400 text-lg">{{ config.description }}</p>
+	<p class="mx-auto max-w-xl text-seasalt-500 dark:text-seasalt-400 text-lg">{{ config.description }}</p>
 	<div class="flex flex-wrap justify-center gap-4 mt-8">
 		<a href="/blog"
 			class="bg-pumpkin hover:bg-pumpkin-600 px-6 py-3 rounded-lg font-semibold text-white transition-colors">
@@ -29,12 +29,12 @@
 					{{ page.title }}
 				</h3>
 				{% if page.date %}
-				<time class="block mt-1 text-seasalt-500 text-sm">
+				<time class="block mt-1 text-seasalt-400 dark:text-seasalt-500 text-sm">
 					{{ page.date | date(format="%B %e, %Y") }}
 				</time>
 				{% endif %}
 				{% if page.description %}
-				<p class="mt-2 text-seasalt-400">{{ page.description }}</p>
+				<p class="mt-2 text-seasalt-500 dark:text-seasalt-400">{{ page.description }}</p>
 				{% endif %}
 			</a>
 		</li>

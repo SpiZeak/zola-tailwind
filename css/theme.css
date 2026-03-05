@@ -1,6 +1,8 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
+	--font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+
 	/* Reset all colors to their initial values for the current theme */
 	--color-*: initial;
 
