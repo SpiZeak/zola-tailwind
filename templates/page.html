@@ -12,13 +12,13 @@
 	<header class="mb-10">
 		<h1 class="font-extrabold text-4xl tracking-tight">{{ page.title }}</h1>
 		{% if page.date %}
-		<div class="flex flex-wrap items-center gap-4 mt-3 text-gray-500 text-sm">
+		<div class="flex flex-wrap items-center gap-4 mt-3 text-seasalt-500 text-sm">
 			<time datetime="{{ page.date }}">{{ page.date | date(format="%B %e, %Y") }}</time>
 			{% if page.taxonomies.tags %}
 			<span class="flex flex-wrap gap-2">
 				{% for tag in page.taxonomies.tags %}
 				<a href="/tags/{{ tag | slugify }}"
-					class="bg-gray-100 hover:bg-orange-50 dark:bg-jet dark:hover:bg-gray-800 px-2 py-0.5 rounded text-pumpkin dark:text-golden transition-colors">
+					class="bg-seasalt-100 hover:bg-pumpkin-50 dark:bg-seasalt-800 dark:hover:bg-seasalt-700 px-2 py-0.5 rounded text-pumpkin dark:text-pumpkin-300 transition-colors">
 					#{{ tag }}
 				</a>
 				{% endfor %}

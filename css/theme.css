@@ -1,0 +1,76 @@
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+	/* Reset all colors to their initial values for the current theme */
+	--color-*: initial;
+
+	/* --- Warm Charcoal (Neutral) --- */
+	--color-warm-charcoal-50:  #f2f2f2;
+	--color-warm-charcoal-100: #e6e6e6;
+	--color-warm-charcoal-200: #cccccc;
+	--color-warm-charcoal-300: #b3b3b3;
+	--color-warm-charcoal-400: #808080;
+	--color-warm-charcoal-500: #4d4d4d;
+	--color-warm-charcoal-600: #333333;
+	--color-warm-charcoal-700: #1a1a1a; /* Original */
+	--color-warm-charcoal-800: #141414;
+	--color-warm-charcoal-900: #0d0d0d;
+	--color-warm-charcoal-950: #050505;
+	--color-warm-charcoal: var(--color-warm-charcoal-700);
+
+	/* --- Pumpkin (Accent) --- */
+	--color-pumpkin-50:  #fff7ed;
+	--color-pumpkin-100: #ffedd5;
+	--color-pumpkin-200: #fed7aa;
+	--color-pumpkin-300: #fdba74;
+	--color-pumpkin-400: #fb923c;
+	--color-pumpkin-500: #ff6b00; /* Original */
+	--color-pumpkin-600: #ea580c;
+	--color-pumpkin-700: #c2410c;
+	--color-pumpkin-800: #9a3412;
+	--color-pumpkin-900: #7c2d12;
+	--color-pumpkin-950: #431407;
+	--color-pumpkin: var(--color-pumpkin-500);
+
+	/* --- Emerald (Success) --- */
+	--color-emerald-50:  #ecfdf5;
+	--color-emerald-100: #d1fae5;
+	--color-emerald-200: #a7f3d0;
+	--color-emerald-300: #6ee7b7;
+	--color-emerald-400: #34d399;
+	--color-emerald-500: #10b981; /* Original Base */
+	--color-emerald-600: #059669;
+	--color-emerald-700: #047857;
+	--color-emerald-800: #065f46;
+	--color-emerald-900: #064e3b;
+	--color-emerald-950: #022c22;
+	--color-emerald: var(--color-emerald-500);
+
+	/* --- Crimson (Danger) --- */
+	--color-crimson-50:  #fef2f2;
+	--color-crimson-100: #fee2e2;
+	--color-crimson-200: #fecaca;
+	--color-crimson-300: #fca5a5;
+	--color-crimson-400: #f87171;
+	--color-crimson-500: #ef4444; /* Original Base */
+	--color-crimson-600: #dc2626;
+	--color-crimson-700: #b91c1c;
+	--color-crimson-800: #991b1b;
+	--color-crimson-900: #7f1d1d;
+	--color-crimson-950: #450a0a;
+	--color-crimson: var(--color-crimson-500);
+
+	/* --- Seasalt (Neutrals/Backgrounds) --- */
+	--color-seasalt-50:  #f9fafb; /* Original Base */
+	--color-seasalt-100: #f3f4f6;
+	--color-seasalt-200: #e5e7eb;
+	--color-seasalt-300: #d1d5db;
+	--color-seasalt-400: #9ca3af;
+	--color-seasalt-500: #6b7280;
+	--color-seasalt-600: #4b5563;
+	--color-seasalt-700: #374151;
+	--color-seasalt-800: #1f2937;
+	--color-seasalt-900: #111827;
+	--color-seasalt-950: #030712;
+	--color-seasalt: var(--color-seasalt-50);
+}

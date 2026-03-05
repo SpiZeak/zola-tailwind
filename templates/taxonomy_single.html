@@ -6,24 +6,24 @@
 
 <header class="mb-10">
 	<h1 class="font-extrabold text-4xl tracking-tight">#{{ term.name }}</h1>
-	<p class="mt-2 text-gray-500 text-sm">{{ term.pages | length }} post{% if term.pages | length != 1 %}s{% endif %}
+	<p class="mt-2 text-seasalt-500 text-sm">{{ term.pages | length }} post{% if term.pages | length != 1 %}s{% endif %}
 	</p>
 </header>
 
 <ul class="space-y-8">
 	{% for page in term.pages %}
-	<li class="pb-8 border-gray-100 dark:border-jet last:border-0 border-b">
+	<li class="pb-8 border-seasalt-100 dark:border-seasalt-800 last:border-0 border-b">
 		<a href="{{ page.permalink }}" class="group block">
 			<h2 class="font-semibold group-hover:text-pumpkin text-xl transition-colors">
 				{{ page.title }}
 			</h2>
 			{% if page.date %}
-			<time class="block mt-1 text-gray-500 text-sm" datetime="{{ page.date }}">
+			<time class="block mt-1 text-seasalt-500 text-sm" datetime="{{ page.date }}">
 				{{ page.date | date(format="%B %e, %Y") }}
 			</time>
 			{% endif %}
 			{% if page.description %}
-			<p class="mt-2 text-gray-600 leading-relaxed">{{ page.description }}</p>
+			<p class="mt-2 text-seasalt-600 leading-relaxed">{{ page.description }}</p>
 			{% endif %}
 		</a>
 	</li>
