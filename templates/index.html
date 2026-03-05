@@ -11,7 +11,7 @@
 			Read the Blog
 		</a>
 		<a href="/about"
-			class="hover:bg-seasalt-50 dark:hover:bg-seasalt-800 px-6 py-3 border border-seasalt-300 dark:border-seasalt-800 rounded-lg font-semibold transition-colors">
+			class="hover:bg-seasalt-50 dark:hover:bg-warm-charcoal-600 px-6 py-3 border border-seasalt-300 dark:border-warm-charcoal-600 rounded-lg font-semibold transition-colors">
 			About
 		</a>
 	</div>
@@ -23,7 +23,7 @@
 	<h2 class="mb-6 font-bold text-2xl">Latest Posts</h2>
 	<ul class="space-y-6">
 		{% for page in blog.pages | slice(end=5) %}
-		<li class="pb-6 border-seasalt-100 dark:border-seasalt-800 last:border-0 border-b">
+		<li class="pb-6 border-seasalt-200 dark:border-warm-charcoal-600 last:border-0 border-b">
 			<a href="{{ page.permalink }}" class="group block">
 				<h3 class="font-semibold group-hover:text-pumpkin text-xl transition-colors">
 					{{ page.title }}
