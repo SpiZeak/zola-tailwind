@@ -18,7 +18,7 @@
 			<span class="flex flex-wrap gap-2">
 				{% for tag in page.taxonomies.tags %}
 				<a href="/tags/{{ tag | slugify }}"
-					class="bg-gray-100 hover:bg-gray-200 px-2 py-0.5 rounded text-gray-600 transition-colors">
+					class="bg-gray-100 hover:bg-orange-50 dark:bg-jet dark:hover:bg-gray-800 px-2 py-0.5 rounded text-pumpkin dark:text-golden transition-colors">
 					#{{ tag }}
 				</a>
 				{% endfor %}

@@ -24,9 +24,9 @@
 {% if pages %}
 <ul class="space-y-8">
 	{% for page in pages %}
-	<li class="pb-8 border-gray-100 last:border-0 border-b">
+	<li class="pb-8 border-gray-100 dark:border-jet last:border-0 border-b">
 		<a href="{{ page.permalink }}" class="group block">
-			<h2 class="font-semibold group-hover:text-blue-600 text-xl transition-colors">
+			<h2 class="font-semibold group-hover:text-pumpkin text-xl transition-colors">
 				{{ page.title }}
 			</h2>
 			{% if page.date %}
@@ -37,7 +37,8 @@
 			{% if page.taxonomies.tags %}
 			<span class="flex flex-wrap gap-2 mt-2">
 				{% for tag in page.taxonomies.tags %}
-				<span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 text-xs">#{{ tag }}</span>
+				<span class="bg-gray-100 dark:bg-jet px-2 py-0.5 rounded text-pumpkin dark:text-golden text-xs">#{{ tag
+					}}</span>
 				{% endfor %}
 			</span>
 			{% endif %}
@@ -52,13 +53,13 @@
 {% if paginator %}
 <nav class="flex justify-between mt-12 font-medium text-sm" aria-label="Pagination">
 	{% if paginator.previous %}
-	<a href="{{ paginator.previous }}" class="text-blue-600 hover:underline">← Newer posts</a>
+	<a href="{{ paginator.previous }}" class="text-pumpkin hover:underline">← Newer posts</a>
 	{% else %}
 	<span></span>
 	{% endif %}
 	<span class="text-gray-500">Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
 	{% if paginator.next %}
-	<a href="{{ paginator.next }}" class="text-blue-600 hover:underline">Older posts →</a>
+	<a href="{{ paginator.next }}" class="text-pumpkin hover:underline">Older posts →</a>
 	{% else %}
 	<span></span>
 	{% endif %}

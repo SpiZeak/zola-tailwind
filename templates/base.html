@@ -17,20 +17,20 @@
 		})();
 	</script>
 
-<body class="flex flex-col bg-white dark:bg-gray-950 min-h-screen text-gray-900 dark:text-gray-100 transition-colors">
+<body class="flex flex-col bg-snow dark:bg-carbon min-h-screen text-jet dark:text-snow transition-colors">
 
-	<header class="border-gray-200 dark:border-gray-800 border-b">
+	<header class="dark:bg-jet border-gray-200 dark:border-jet border-b">
 		<nav class="flex justify-between items-center mx-auto px-4 py-4 max-w-4xl">
-			<a href="/" class="font-bold hover:text-blue-600 text-xl tracking-tight transition-colors">
+			<a href="/" class="font-bold hover:text-pumpkin text-xl tracking-tight transition-colors">
 				{{ config.title }}
 			</a>
 			<ul class="flex items-center gap-6 font-medium text-sm">
-				<li><a href="/" class="hover:text-blue-600 transition-colors">Home</a></li>
-				<li><a href="/blog" class="hover:text-blue-600 transition-colors">Blog</a></li>
-				<li><a href="/about" class="hover:text-blue-600 transition-colors">About</a></li>
+				<li><a href="/" class="hover:text-pumpkin transition-colors">Home</a></li>
+				<li><a href="/blog" class="hover:text-pumpkin transition-colors">Blog</a></li>
+				<li><a href="/about" class="hover:text-pumpkin transition-colors">About</a></li>
 				<li>
 					<button id="theme-toggle" aria-label="Toggle dark mode"
-						class="hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors">
+						class="hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg text-gray-600 hover:text-pumpkin dark:hover:text-golden dark:text-gray-300 transition-colors">
 						<!-- Sun icon (shown in dark mode) -->
 						<svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="hidden dark:block size-5"
 							fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -53,14 +53,14 @@
 		{% block content %}{% endblock content %}
 	</main>
 
-	<footer class="mt-auto border-gray-200 dark:border-gray-800 border-t">
+	<footer class="mt-auto border-gray-200 dark:border-jet border-t">
 		<div class="mx-auto px-4 py-6 max-w-4xl text-gray-500 dark:text-gray-400 text-sm text-center">
 			Built with
 			<a href="https://www.getzola.org"
-				class="hover:text-gray-700 dark:hover:text-gray-200 underline transition-colors">Zola</a>
+				class="hover:text-pumpkin dark:hover:text-golden underline transition-colors">Zola</a>
 			and
 			<a href="https://tailwindcss.com"
-				class="hover:text-gray-700 dark:hover:text-gray-200 underline transition-colors">Tailwind CSS</a>.
+				class="hover:text-pumpkin dark:hover:text-golden underline transition-colors">Tailwind CSS</a>.
 		</div>
 	</footer>
 

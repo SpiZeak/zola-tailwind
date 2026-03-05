@@ -2,6 +2,16 @@
 
 @variant dark (&:where(.dark, .dark *));
 
+@theme {
+	--color-carbon:    #1a1a1a;
+	--color-jet:       #1f2937;
+	--color-pumpkin:   #ff6b00;
+	--color-golden:    #f59e0b;
+	--color-strawberry:#ef4444;
+	--color-mint:      #10b981;
+	--color-snow:      #f9fafb;
+}
+
 /*
  * Prose styles for rendered Markdown content.
  * Apply the .prose class to any container wrapping {{ page.content | safe }}.
@@ -46,17 +56,17 @@
 	}
 
 	.prose a {
-		color: #2563eb;
+		color: #ff6b00;
 		text-decoration: underline;
 		@variant dark {
-			color: #60a5fa;
+			color: #f59e0b;
 		}
 	}
 
 	.prose a:hover {
-		color: #1d4ed8;
+		color: #cc5500;
 		@variant dark {
-			color: #93c5fd;
+			color: #fbbf24;
 		}
 	}
 
