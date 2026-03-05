@@ -1,6 +1,6 @@
 +++
 title = "Hello, World!"
-date = 2026-03-05
+date = 2026-03-04
 description = "Welcome to the first post on this Zola + Tailwind CSS starter — a quick tour of what's included."
 
 [taxonomies]
