@@ -58,9 +58,6 @@
     --color-seasalt-800: #1f2937;
     --color-seasalt-900: #111827;
     --color-seasalt: var(--color-seasalt-50);
-    --animate-slide-down: slide-down 0.4s ease both;
-    --animate-slide-up: slide-up 0.4s ease both;
-    --animate-fade-in: fade-in 0.4s ease both;
   }
 }
 @layer base {
@@ -284,9 +281,6 @@
   .inline-flex {
     display: inline-flex;
   }
-  .table {
-    display: table;
-  }
   .size-5 {
     width: calc(var(--spacing) * 5);
     height: calc(var(--spacing) * 5);
@@ -306,26 +300,8 @@
   .flex-1 {
     flex: 1;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .animate-fade-in {
-    animation: var(--animate-fade-in);
-  }
-  .animate-slide-down {
-    animation: var(--animate-slide-down);
-  }
-  .animate-slide-up {
-    animation: var(--animate-slide-up);
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -341,9 +317,6 @@
   }
   .justify-center {
     justify-content: center;
-  }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
   }
   .gap-1\.5 {
     gap: calc(var(--spacing) * 1.5);
@@ -422,14 +395,8 @@
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
-  .py-0 {
-    padding-block: calc(var(--spacing) * 0);
-  }
   .py-0\.5 {
     padding-block: calc(var(--spacing) * 0.5);
-  }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
   }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
@@ -531,10 +498,6 @@
   .underline {
     text-decoration-line: underline;
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -545,29 +508,29 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .\[animation-delay\:50ms\] {
-    animation-delay: 50ms;
+  .delay-50 {
+    transition-delay: 50ms;
   }
-  .\[animation-delay\:100ms\] {
-    animation-delay: 100ms;
+  .delay-100 {
+    transition-delay: 100ms;
   }
-  .\[animation-delay\:150ms\] {
-    animation-delay: 150ms;
+  .delay-150 {
+    transition-delay: 150ms;
   }
-  .\[animation-delay\:200ms\] {
-    animation-delay: 200ms;
+  .delay-200 {
+    transition-delay: 200ms;
   }
-  .\[animation-delay\:250ms\] {
-    animation-delay: 250ms;
+  .delay-250 {
+    transition-delay: 250ms;
   }
-  .\[animation-delay\:300ms\] {
-    animation-delay: 300ms;
+  .delay-300 {
+    transition-delay: 300ms;
   }
-  .\[animation-delay\:350ms\] {
-    animation-delay: 350ms;
+  .delay-350 {
+    transition-delay: 350ms;
   }
-  .\[animation-delay\:725ms\] {
-    animation-delay: 725ms;
+  .delay-700 {
+    transition-delay: 700ms;
   }
   .group-hover\:text-pumpkin {
     &:is(:where(.group):hover *) {
@@ -730,6 +693,58 @@
     opacity: 1;
   }
 }
+@layer utilities {
+  .animate-slide-down {
+    animation: slide-down 0.4s ease both;
+  }
+  .animate-slide-up {
+    animation: slide-up 0.4s ease both;
+  }
+  .animate-fade-in {
+    animation: fade-in 0.4s ease both;
+  }
+  .delay-50 {
+    animation-delay: 50ms;
+  }
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  .delay-250 {
+    animation-delay: 250ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  .delay-350 {
+    animation-delay: 350ms;
+  }
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+  .delay-450 {
+    animation-delay: 450ms;
+  }
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+  .delay-600 {
+    animation-delay: 600ms;
+  }
+  .delay-700 {
+    animation-delay: 700ms;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-slide-down,	.animate-slide-up,	.animate-fade-in {
+      animation: none;
+    }
+  }
+}
 @layer components {
   .prose p {
     margin-bottom: 1.25rem;
@@ -876,26 +891,6 @@
     border-bottom: none;
   }
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -918,25 +913,14 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
     }
   }
 }

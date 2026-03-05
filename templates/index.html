@@ -3,9 +3,9 @@
 {% block content %}
 
 <section class="py-16 text-center">
-	<h1 class="mb-4 font-extrabold text-5xl tracking-tight animate-slide-up [animation-delay:50ms]">{{ config.title }}</h1>
-	<p class="mx-auto max-w-xl text-seasalt-500 dark:text-seasalt-400 text-lg animate-slide-up [animation-delay:150ms]">{{ config.description }}</p>
-	<div class="flex flex-wrap justify-center gap-4 mt-8 animate-slide-up [animation-delay:250ms]">
+	<h1 class="mb-4 font-extrabold text-5xl tracking-tight animate-slide-up delay-50">{{ config.title }}</h1>
+	<p class="mx-auto max-w-xl text-seasalt-500 dark:text-seasalt-400 text-lg animate-slide-up delay-150">{{ config.description }}</p>
+	<div class="flex flex-wrap justify-center gap-4 mt-8 animate-slide-up delay-250">
 		<a href="/blog"
 			class="bg-pumpkin hover:bg-pumpkin-600 px-6 py-3 rounded-lg font-semibold text-white transition-colors">
 			Read the Blog
@@ -20,7 +20,7 @@
 {% set blog = get_section(path="blog/_index.md") %}
 {% if blog.pages %}
 <section>
-	<h2 class="mb-6 font-bold text-2xl animate-slide-up [animation-delay:350ms]">Latest Posts</h2>
+	<h2 class="mb-6 font-bold text-2xl animate-slide-up delay-350">Latest Posts</h2>
 	<ul class="space-y-6">
 		{% for page in blog.pages | slice(end=5) %}
 		<li class="pb-6 border-seasalt-200 dark:border-warm-charcoal-600 last:border-0 border-b animate-slide-up" style="animation-delay: {{ loop.index * 75 + 375 }}ms">
@@ -40,7 +40,7 @@
 		</li>
 		{% endfor %}
 	</ul>
-	<a href="/blog" class="inline-block mt-8 font-medium text-pumpkin hover:underline animate-slide-up [animation-delay:725ms]">
+	<a href="/blog" class="inline-block mt-8 font-medium text-pumpkin hover:underline animate-slide-up delay-700">
 		View all posts →
 	</a>
 </section>

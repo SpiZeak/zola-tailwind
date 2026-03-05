@@ -5,13 +5,13 @@
 {% block content %}
 
 <header class="mb-10">
-	<h1 class="font-extrabold text-4xl tracking-tight">Tags</h1>
+	<h1 class="font-extrabold text-4xl tracking-tight animate-slide-up delay-50">Tags</h1>
 </header>
 
 {% if terms %}
 <ul class="flex flex-wrap gap-3">
 	{% for term in terms %}
-	<li>
+	<li class="animate-slide-up" style="animation-delay: {{ loop.index * 50 + 100 }}ms">
 		<a href="{{ term.permalink }}"
 			class="inline-flex items-center gap-1.5 bg-seasalt-100 hover:bg-pumpkin-50 dark:bg-seasalt-800 dark:hover:bg-seasalt-700 px-3 py-1.5 rounded-lg font-medium text-pumpkin dark:text-pumpkin-300 text-sm transition-colors">
 			#{{ term.name }}
