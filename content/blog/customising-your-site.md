@@ -116,3 +116,7 @@ The Tailwind CLI is installed via Bun in `docker/tailwind/Dockerfile`. To add a 
    docker compose build tailwind
    docker compose up
    ```
+
+---
+
+Found an issue or want to contribute? Open a pull request or file an issue on [GitHub](https://github.com/SpiZeak/zola-tailwind).

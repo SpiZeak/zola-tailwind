@@ -1,5 +1,7 @@
 # Zola + Tailwind CSS Boilerplate
 
+[![GitHub](https://img.shields.io/badge/GitHub-SpiZeak%2Fzola--tailwind-181717?logo=github)](https://github.com/SpiZeak/zola-tailwind)
+
 A minimal, production-ready boilerplate for building static sites with [Zola](https://www.getzola.org/) and [Tailwind CSS v4](https://tailwindcss.com/). The entire development environment runs inside Docker — no local Rust or Node.js required.
 
 ## Features

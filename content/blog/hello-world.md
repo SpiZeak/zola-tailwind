@@ -48,5 +48,6 @@ console.log(greet('Tailwind'));
 - Replace this post with your own content in `content/blog/`.
 - Customise the layout in `templates/base.html`.
 - Add new Tailwind utilities or component styles in `css/tailwind.css`.
+- Star or fork the project on [GitHub](https://github.com/SpiZeak/zola-tailwind).
 
 Happy building!

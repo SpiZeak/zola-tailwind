@@ -22,4 +22,4 @@ This boilerplate gives you a fast starting point for building Zola-powered sites
 
 Clone the repository, run `docker compose up`, and open [http://localhost](http://localhost) in your browser. Start editing the files in `content/` and `templates/` — changes are reflected live.
 
-See the [README](https://github.com/SpiZeak/zola-tailwind) for full documentation.
+See the [README](https://github.com/SpiZeak/zola-tailwind#readme) for full documentation, or browse the full source on [GitHub](https://github.com/SpiZeak/zola-tailwind).
