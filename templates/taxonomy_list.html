@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Tags | {{ config.title }}{% endblock title %}
+
+{% block content %}
+
+<header class="mb-10">
+	<h1 class="font-extrabold text-4xl tracking-tight">Tags</h1>
+</header>
+
+{% if terms %}
+<ul class="flex flex-wrap gap-3">
+	{% for term in terms %}
+	<li>
+		<a href="{{ term.permalink }}"
+			class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg font-medium text-gray-700 text-sm transition-colors">
+			#{{ term.name }}
+			<span class="text-gray-400 text-xs">({{ term.pages | length }})</span>
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+{% else %}
+<p class="text-gray-500">No tags yet.</p>
+{% endif %}
+
+{% endblock content %}

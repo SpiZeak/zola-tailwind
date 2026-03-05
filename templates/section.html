@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+
+{% block description %}
+{%- if section.description %}{{ section.description }}{% else %}{{ config.description }}{% endif -%}
+{% endblock description %}
+
+{% block content %}
+
+<header class="mb-10">
+	<h1 class="font-extrabold text-4xl tracking-tight">{{ section.title }}</h1>
+	{% if section.content %}
+	<div class="mt-4 prose">{{ section.content | safe }}</div>
+	{% endif %}
+</header>
+
+{% if paginator %}
+{% set pages = paginator.pages %}
+{% else %}
+{% set pages = section.pages %}
+{% endif %}
+
+{% if pages %}
+<ul class="space-y-8">
+	{% for page in pages %}
+	<li class="pb-8 border-gray-100 last:border-0 border-b">
+		<a href="{{ page.permalink }}" class="group block">
+			<h2 class="font-semibold group-hover:text-blue-600 text-xl transition-colors">
+				{{ page.title }}
+			</h2>
+			{% if page.date %}
+			<time class="block mt-1 text-gray-500 text-sm" datetime="{{ page.date }}">
+				{{ page.date | date(format="%B %e, %Y") }}
+			</time>
+			{% endif %}
+			{% if page.taxonomies.tags %}
+			<span class="flex flex-wrap gap-2 mt-2">
+				{% for tag in page.taxonomies.tags %}
+				<span class="bg-gray-100 px-2 py-0.5 rounded text-gray-600 text-xs">#{{ tag }}</span>
+				{% endfor %}
+			</span>
+			{% endif %}
+			{% if page.description %}
+			<p class="mt-3 text-gray-600 leading-relaxed">{{ page.description }}</p>
+			{% endif %}
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+
+{% if paginator %}
+<nav class="flex justify-between mt-12 font-medium text-sm" aria-label="Pagination">
+	{% if paginator.previous %}
+	<a href="{{ paginator.previous }}" class="text-blue-600 hover:underline">← Newer posts</a>
+	{% else %}
+	<span></span>
+	{% endif %}
+	<span class="text-gray-500">Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+	{% if paginator.next %}
+	<a href="{{ paginator.next }}" class="text-blue-600 hover:underline">Older posts →</a>
+	{% else %}
+	<span></span>
+	{% endif %}
+</nav>
+{% endif %}
+
+{% else %}
+<p class="text-gray-500">No posts yet. Check back soon!</p>
+{% endif %}
+
+{% endblock content %}

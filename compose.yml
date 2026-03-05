@@ -2,7 +2,7 @@ services:
   zola:
     user: "1000:1000"
     image: ghcr.io/getzola/zola:v0.22.1
-    container_name: web
+    container_name: zola
     ports:
       - "80:80"
     volumes:

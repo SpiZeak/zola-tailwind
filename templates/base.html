@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{% block title %}{{ config.title }}{% endblock title %}</title>
+	<meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
+	<link rel="stylesheet" href="/tailwind.css" />
+</head>
+
+<body class="flex flex-col bg-white min-h-screen text-gray-900">
+
+	<header class="border-gray-200 border-b">
+		<nav class="flex justify-between items-center mx-auto px-4 py-4 max-w-4xl">
+			<a href="/" class="font-bold hover:text-blue-600 text-xl tracking-tight transition-colors">
+				{{ config.title }}
+			</a>
+			<ul class="flex gap-6 font-medium text-sm">
+				<li><a href="/" class="hover:text-blue-600 transition-colors">Home</a></li>
+				<li><a href="/blog" class="hover:text-blue-600 transition-colors">Blog</a></li>
+				<li><a href="/about" class="hover:text-blue-600 transition-colors">About</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="flex-1 mx-auto px-4 py-12 w-full max-w-4xl">
+		{% block content %}{% endblock content %}
+	</main>
+
+	<footer class="mt-auto border-gray-200 border-t">
+		<div class="mx-auto px-4 py-6 max-w-4xl text-gray-500 text-sm text-center">
+			Built with
+			<a href="https://www.getzola.org" class="hover:text-gray-700 underline transition-colors">Zola</a>
+			and
+			<a href="https://tailwindcss.com" class="hover:text-gray-700 underline transition-colors">Tailwind CSS</a>.
+		</div>
+	</footer>
+
+</body>
+
+</html>
